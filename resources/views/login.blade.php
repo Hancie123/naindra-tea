@@ -11,11 +11,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Naindra Tea Farm</title>
+    <meta name="description"
+        content="Discover the exquisite flavors of Naindra Tea Farm, where we cultivate the finest organic teas in harmony with nature. From lush green tea gardens to handcrafted blends, indulge in a tea experience like no other. Buy premium teas online now.">
+    <meta name="keywords"
+        content="Naindra Tea Farm, organic tea, finest tea, green tea, handcrafted blends, premium teas, buy tea online, natural tea cultivation, tea experience">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Naindra Tea Farm - Organic Tea Delights | Buy Premium Teas Online">
+    <meta property="og:description"
+        content="Experience the delightful taste of Naindra Tea Farm's organic teas, cultivated with love and care in nature's embrace. Explore our range of premium teas and handcrafted blends, each sip taking you on a journey of flavors. Order now and elevate your tea experience!">
+    <meta property="og:image" content="your_image_url_here">
+    <!-- Add the URL of an image representing the website here -->
+    <meta property="og:url" content="https://www.naindrarajphago.com.np">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:title" content="Naindra Tea Farm - An application to manage tea records">
+    <meta name="twitter:description"
+        content="Savor the goodness of Naindra Tea Farm's finest organic teas, handpicked from our lush gardens. Immerse yourself in a world of natural flavors with our premium tea collection. Shop now to enhance your tea rituals.">
+    <meta name="twitter:image" content="{{url('assets/Images/2.png')}}">
+    <meta name="twitter:card" content="Naindra Tea Farm">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMMSRZWMK7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SMMSRZWMK7');
+    </script>
 
 
 </head>
@@ -60,8 +94,8 @@
                 @endif
 
                 <input type="hidden" name="deviceModel" id="deviceModel">
-                <input type="hidden" name="osInfo" id="osInfo" >
-                <input type="hidden" name="location" id="location" >
+                <input type="hidden" name="osInfo" id="osInfo">
+                <input type="hidden" name="location" id="location">
                 <input type="hidden" name="date" id="date">
 
 

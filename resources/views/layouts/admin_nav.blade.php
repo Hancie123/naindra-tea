@@ -17,6 +17,19 @@
         <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                 <li class="nav-item dropdown">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en'
+                        }, 'google_translate_element');
+                    }
+                    </script>
+
+                    <script type="text/javascript"
+                        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </li>
+                <li class="nav-item dropdown">
                     <iframe class="mt-2" scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0"
                         allowtransparency="true"
                         src="https://www.ashesh.com.np/linknepali-time.php?dwn=only&font_color=333333&font_size=14&bikram_sambat=0&api=731273n184"
@@ -44,8 +57,9 @@
                                 <i class="bi bi-tools"></i>
                                 <p class="mb-0 fs-3">Tools</p>
                             </a>
-                            <a href="{{url('/admin/acivity-logs')}}" class="d-flex align-items-center gap-2 dropdown-item">
-                            <i class='bx bx-time-five bx-sm'></i>
+                            <a href="{{url('/admin/acivity-logs')}}"
+                                class="d-flex align-items-center gap-2 dropdown-item">
+                                <i class='bx bx-time-five bx-sm'></i>
                                 <p class="mb-0 fs-3">Activity Logs</p>
                             </a>
                             <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">

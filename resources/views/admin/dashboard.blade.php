@@ -100,13 +100,13 @@
 
                                 <!-- Second column -->
                                 <div class="col-4 text-center pl-3" style="border-right: 1px solid #ccc;">
-                                    <a href="#" class="text-dark bx-flashing-hover">
+                                    <a href="{{url('/admin/settings')}}" class="text-dark bx-flashing-hover">
                                         <i class='bx bx-cog bx-md text-success'></i><br>
                                         Settings</a>
                                 </div>
                                 <!-- Second column -->
                                 <div class="col-4 text-center pl-3" >
-                                    <a href="#" class="text-dark bx-flashing-hover">
+                                    <a href="{{url('/admin/profile')}}" class="text-dark bx-flashing-hover">
                                         <i class='bx bx-user-circle bx-md text-success'></i><br>
                                         Profile</a>
                                 </div>
