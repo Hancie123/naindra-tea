@@ -78,12 +78,16 @@
                 </div>
                 <div class="form-group">
                     <span class="input-icon text-dark mx-1"><i class="fa fa-lock"></i></span>
-                    <input type="password" name="password" class="form-control" placeholder="Password" />
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                    <p id="text">WARNING! Caps lock is ON.</p>
+                    <div class="float-start"><input type="checkbox" class="mx-1" onclick="myFunction()">Show Password
+                    </div>
                     @error('password')
                     <span class="text-danger">{{$message}}</span>
 
                     @enderror
                     <span class="forgot"><a href="#">Forgot Password?</a></span>
+
                 </div>
                 <button class="btn signin">Login</button><br><br>
                 @if(Session()->has('success'))
@@ -109,6 +113,36 @@
 
 
     </div>
+
+
+    <script>
+    var input = document.getElementById("password");
+    var text = document.getElementById("text");
+    input.addEventListener("keyup", function(event) {
+
+        if (event.getModifierState("CapsLock")) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none"
+        }
+    });
+    </script>
+
+<style>
+#text {display:none;color:red}
+</style>
+
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    </script>
 
 
 
