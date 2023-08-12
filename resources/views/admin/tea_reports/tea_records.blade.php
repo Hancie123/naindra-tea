@@ -220,35 +220,33 @@
 
 
                 /* Custom styles for the table when printing */
-    @media print {
-        .rounded-billing-table {
-            border-radius: 15px;
-            border-collapse: separate;
-            border-spacing: 0;
-            overflow: hidden;
-        }
+                @media print {
+                    .rounded-billing-table {
+                        border-radius: 15px;
+                        border-collapse: separate;
+                        border-spacing: 0;
+                        overflow: hidden;
+                    }
 
-        .rounded-billing-table thead th {
-            background-color: #f1f1f1;
-        }
+                    .rounded-billing-table thead th {
+                        background-color: #f1f1f1;
+                    }
 
-        .rounded-billing-table th,
-        .rounded-billing-table td {
-            padding: 10px 15px;
-            text-align: center;
-            border: 1px solid #ccc;
-        }
+                    .rounded-billing-table th,
+                    .rounded-billing-table td {
+                        padding: 10px 15px;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                    }
 
-        .rounded-billing-table tbody tr:last-child td {
-            border-bottom: none;
-        }
+                    .rounded-billing-table tbody tr:last-child td {
+                        border-bottom: none;
+                    }
 
-        .rounded-billing-table tfoot td {
-            border-top: 1px solid #ccc;
-        }
-    }
-
-                
+                    .rounded-billing-table tfoot td {
+                        border-top: 1px solid #ccc;
+                    }
+                }
                 </style>
 
 
@@ -271,7 +269,10 @@
                     if (totalAmountCell) {
                         const quantilFactor = 100; // Adjust the factor as needed
                         const totalQuantil = totalAmount / quantilFactor;
-                        totalAmountCell.innerText = 'Total: ' + totalQuantil + ' Quantils';
+                        const formattedTotalQuantil = totalQuantil.toFixed(2).replace(/\d(?=(\d{3})+\.)/g,
+                            "$&,");
+
+                        totalAmountCell.innerText = 'Total: ' + formattedTotalQuantil + ' Quantils';
                     }
 
                 });
@@ -291,18 +292,16 @@
                         }
                     }
 
-                    
+
 
                     // Assuming 'totalAmount' is a numeric value representing the total amount
                     // Display total amount with commas as thousands separators and in words
                     var totalAmountCell = document.getElementById('total-amount');
                     if (totalAmountCell) {
-                        var formattedTotalAmount = totalAmount
-                            .toLocaleString(); // Convert to string with commas
-                        
+                        var formattedTotalAmount = totalAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+
                         totalAmountCell.innerText = 'Total Rs: ' + formattedTotalAmount;
                     }
-
 
                 });
                 </script>

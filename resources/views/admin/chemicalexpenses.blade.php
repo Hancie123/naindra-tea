@@ -659,9 +659,10 @@
                 }
 
                 /* Change the font size and weight of the table header */
-                #table_data th {
-                    font-size: 16px;
-                    font-weight: bold;
+                #myTable th {
+                    font-size: 0.93em;
+                    font-weight: normal;
+                    font-size: normal;
                 }
 
                 /* Change the background color and font size of the table rows */

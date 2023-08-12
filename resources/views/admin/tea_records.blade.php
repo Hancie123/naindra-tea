@@ -242,7 +242,7 @@
                                 <th>Tea Rate</th>
                                 <th>Water Percent</th>
                                 <th>Water KG</th>
-                                <th>Total Tea KG</th>
+                                <th>Total Tea</th>
                                 <th>Total Amount</th>
                                 <th>Plucked Time</th>
                                 <th>Remarks</th>
@@ -715,9 +715,11 @@
                 }
 
                 /* Change the font size and weight of the table header */
-                #table_data th {
-                    font-size: 16px;
-                    font-weight: bold;
+                #myTable th {
+                    font-size: 0.93em;
+                    font-weight: normal;
+                    font-size: normal;
+                   
                 }
 
                 /* Change the background color and font size of the table rows */

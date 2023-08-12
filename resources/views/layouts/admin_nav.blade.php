@@ -46,11 +46,11 @@
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                         <div class="message-body">
                             <a href="{{url('/admin/profile')}}" class="d-flex align-items-center gap-2 dropdown-item">
-                            <i class='bx bx-user-circle bx-sm' ></i>
+                                <i class='bx bx-user-circle bx-sm'></i>
                                 <p class="mb-0 fs-3">My Profile</p>
                             </a>
                             <a href="{{url('/admin/tools')}}" class="d-flex align-items-center gap-2 dropdown-item">
-                            <i class='bx bxs-hand bx-sm'></i>
+                                <i class='bx bxs-hand bx-sm'></i>
                                 <p class="mb-0 fs-3">Tools</p>
                             </a>
                             <a href="{{url('/admin/acivity-logs')}}"
@@ -59,25 +59,28 @@
                                 <p class="mb-0 fs-3">Activity Logs</p>
                             </a>
                             <a href="{{url('/admin/settings')}}" class="d-flex align-items-center gap-2 dropdown-item">
-                            <i class='bx bx-cog bx-sm' ></i>
+                                <i class='bx bx-cog bx-sm'></i>
                                 <p class="mb-0 fs-3">Settings</p>
                             </a>
                             <a href="{{url('/logout')}}" class="d-flex align-items-center gap-2 dropdown-item">
-                            <i class='bx bx-log-out-circle bx-sm'></i>
+                                <i class='bx bx-log-out-circle bx-sm'></i>
                                 <p class="mb-0 fs-3">Logout</p>
                             </a>
-                            <a class="d-flex align-items-center gap-2 dropdown-item"><div id="google_translate_element"></div></a>
-                            <script type="text/javascript">
-                            function googleTranslateElementInit() {
-                                new google.translate.TranslateElement({
-                                    pageLanguage: 'en'
-                                }, 'google_translate_element');
-                            }
+                            <a class="d-flex align-items-center gap-2 dropdown-item">
+                                <div id="google_translate_element"></div>
+                            </a>
+                            
+                            <script type = "text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({
+                                        pageLanguage: 'en'
+                                    }, 'google_translate_element');
+                                }
                             </script>
-
                             <script type="text/javascript"
                                 src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
                             </script>
+                            
 
                         </div>
                     </div>

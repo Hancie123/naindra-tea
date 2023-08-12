@@ -394,8 +394,8 @@
                             <tr>
                                 <th>Bill ID</th>
                                 <th>Date</th>
-                                <th>Employee Name</th>
-                                <th>Wage Kg</th>
+                                <th>Emp Name</th>
+                                <th>Wage (Tea)</th>
                                 <th>Wage Amount</th>
                                 <th>Tea Kg</th>
                                 <th>OT Amount</th>
@@ -544,8 +544,10 @@
 
                 /* Change the font size and weight of the table header */
                 #table_data th {
-                    font-size: 16px;
-                    font-weight: bold;
+                    font-size: 0.93em;
+                    font-weight: normal;
+                    font-size: normal;
+                   
                 }
 
                 /* Change the background color and font size of the table rows */

@@ -31,6 +31,7 @@ class empbillcontroller extends Controller
         DB::raw('SUM(tea_bills.total_amount) as total_amount'))
     ->where('remarks', $remarks)
     ->groupBy('employees.Name', 'tea_bills.remarks')
+    ->OrderBy('total_amount','desc')
     ->get();
 
 

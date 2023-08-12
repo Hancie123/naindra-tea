@@ -3,6 +3,8 @@
 @include('layouts/admin_header')
 @push('title')
 <title>Naindra Tea Farm | Tea Billing Statements For Employees Of {{$remarks}}</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.3.2/dist/html2canvas.min.js"></script>
 @livewireStyles
 </head>
 
@@ -96,7 +98,7 @@
                                             @endforeach()
                                         </select>
                                         <button class="btn btn-primary" type="submit">Search</button>
-                                        <button class="btn btn-danger" onclick="printTable()"
+                                        <button class="btn btn-danger" onclick="generate()()"
                                             type="button">Print</button>
                                     </div>
                                 </div>
@@ -123,12 +125,12 @@
                                         <th>Bill ID</th>
                                         <th>Date</th>
                                         <th>Name</th>
-                                        <th>Wage Kg</th>
+                                        <th>Wage (Tea)</th>
                                         <th>Wage Amount</th>
                                         <th>Total Tea</th>
-                                        <th>OT Amount</th>
+                                        <th>Overtime Amount</th>
                                         <th>Total Amount</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody class="text-dark">
@@ -142,7 +144,7 @@
                                         <td>{{$data->total_tea_kg}} Kg</td>
                                         <td>Rs. {{$data->total_ot_amount}}</td>
                                         <td>Rs. {{$data->total_amount}}</td>
-                                        
+
                                     </tr>
                                     @endforeach
                                     <tr id="total-row">
@@ -238,6 +240,42 @@
                 </script>
 
 
+                <script>
+                function generate() {
+                    var doc = new jsPDF('p', 'pt', 'letter');
+                    var pageWidth = doc.internal.pageSize.width;
+                    var y = 40;
+                    doc.setLineWidth(2);
+
+                    var remarks = "{{$remarks}}"; // Replace this with your Blade variable
+                    var pageTitle = "Tea Bill of " + remarks;
+                    var titleWidth = doc.getStringUnitWidth(pageTitle) * doc.internal.getFontSize() / doc.internal
+                        .scaleFactor;
+                    var titleX = (pageWidth - titleWidth) / 2;
+
+                    doc.text(titleX, y, pageTitle);
+
+                    // Add the additional line of text below the title
+                    var additionalText = "Naindra Tea Farming";
+                    var additionalTextWidth = doc.getStringUnitWidth(additionalText) * doc.internal.getFontSize() / doc
+                        .internal.scaleFactor;
+                    var additionalTextX = (pageWidth - additionalTextWidth) / 2;
+                    doc.setFontSize(13);
+                    doc.text(additionalTextX, y + 14, additionalText);
+
+                    // Using html2canvas to capture table content as an image
+                    html2canvas(document.getElementById("bill-table")).then(function(canvas) {
+                        var imgData = canvas.toDataURL('image/png');
+
+                        var tableX = 40;
+                        var tableY = y + 40; // Adjust this value to control the gap between title and table
+                        var tableWidth = 530;
+
+                        doc.addImage(imgData, 'PNG', tableX, tableY, tableWidth, 0);
+                        doc.save('Tea_Bill.pdf');
+                    });
+                }
+                </script>
 
 
 
@@ -284,6 +322,12 @@
 
 
                 @include('layouts/admin_footer')
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/
+jspdf/1.5.3/jspdf.min.js">
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/
+jspdf-autotable/3.5.6/jspdf.
+plugin.autotable.min.js"></script>
 
             </div>
         </div>
