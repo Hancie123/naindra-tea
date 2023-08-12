@@ -302,6 +302,7 @@
 
                         ot_kg = tea_kg - wage_kg;
                         ot_amount = ot_kg * 2;
+                        
                         total_amount = ot_amount + wage_amount;
 
                         $('#ot_amount').val(ot_amount);

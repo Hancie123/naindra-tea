@@ -121,14 +121,14 @@
                                 <thead id="table-heading" class="rounded text-danger">
                                     <tr>
                                         <th>Bill ID</th>
-                                        <th>Nepali Date</th>
+                                        <th>Date</th>
                                         <th>Name</th>
-                                        <th>Wage Total Kg</th>
-                                        <th>Wage Total Amount</th>
-                                        <th>Tea Total Kg</th>
-                                        <th>OT Total Amount</th>
+                                        <th>Wage Kg</th>
+                                        <th>Wage Amount</th>
+                                        <th>Total Tea</th>
+                                        <th>OT Amount</th>
                                         <th>Total Amount</th>
-                                        <th>Remarks</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody class="text-dark">
@@ -142,12 +142,12 @@
                                         <td>{{$data->total_tea_kg}} Kg</td>
                                         <td>Rs. {{$data->total_ot_amount}}</td>
                                         <td>Rs. {{$data->total_amount}}</td>
-                                        <td>{{$data->remarks}}</td>
+                                        
                                     </tr>
                                     @endforeach
                                     <tr id="total-row">
                                         <td colspan="7"></td>
-                                        <td id="total-amount" colspan="2"></td>
+                                        <td id="total-amount" colspan="1"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -208,10 +208,9 @@
                     var totalAmountCell = document.getElementById('total-amount');
                     if (totalAmountCell) {
                         var formattedTotalAmount = totalAmount
-                    .toLocaleString(); // Convert to string with commas
+                            .toLocaleString(); // Convert to string with commas
                         var totalAmountInWords = numberToWords(totalAmount);
-                        totalAmountCell.innerText = 'Total Rs: ' + formattedTotalAmount + '\n(' +
-                            totalAmountInWords + ' Rupees Only'+')';
+                        totalAmountCell.innerText = 'Total Rs: ' + formattedTotalAmount;
                     }
                 });
                 </script>
@@ -251,8 +250,21 @@
 
                 #table-heading {
                     background: #3F3E91;
+                    font-weight: thin;
 
 
+                }
+
+                #table-heading th {
+                    font-weight: normal;
+                    font-size: normal;
+                }
+
+                @media (max-width: 768px) {
+                    #table-heading th {
+                        font-size: small;
+                        /* Adjust the font size for smaller devices if needed */
+                    }
                 }
 
 
