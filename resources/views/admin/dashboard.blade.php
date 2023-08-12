@@ -63,7 +63,8 @@
                     <div class="col-sm-6">
                         <div class="card p-3">
 
-                            <label class="h4 m-4"><i class='bx bx-sun bx-md text-warning'></i> <span id="greeting"></span>,
+                            <label class="h4 m-4"><i class='bx bx-sun bx-md text-warning'></i> <span
+                                    id="greeting"></span>,
                                 {{Session()->get('name')}}</label><br>
 
 
@@ -82,7 +83,7 @@
                                         Tea Records</a>
                                 </div>
                                 <!-- Second column -->
-                                <div class="col-4 text-center pl-3" >
+                                <div class="col-4 text-center pl-3">
                                     <a href="{{url('/admin/tea-suppliers')}}" class="text-dark bx-flashing-hover">
                                         <i class='bx bxs-truck bx-md text-success'></i><br>
                                         Suppliers</a>
@@ -105,7 +106,7 @@
                                         Settings</a>
                                 </div>
                                 <!-- Second column -->
-                                <div class="col-4 text-center pl-3" >
+                                <div class="col-4 text-center pl-3">
                                     <a href="{{url('/admin/profile')}}" class="text-dark bx-flashing-hover">
                                         <i class='bx bx-user-circle bx-md text-success'></i><br>
                                         Profile</a>
@@ -280,71 +281,80 @@
                             <div class="card-body">
 
 
-                            <div class="row align-items-center mt-2">
-                                <!-- First column with a vertical line on the right side -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3 " style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-user bx-md text-success'></i><br>
-                                        Total Employees</a><br>
+                                <div class="row align-items-center mt-2">
+                                    <!-- First column with a vertical line on the right side -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3 "
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-user bx-md text-success'></i><br>
+                                            Total Employees</a><br>
                                         <label class="text-dark">{{$countemployees}}</label>
+                                    </div>
+
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3 "
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-trending-up bx-md text-success'></i><br>
+                                            Net Profit</a><br>
+                                        <label class="text-dark" id="formatted-teaprofit">Rs. {{$netprofit}}</label>
+                                       
+                                    </div>
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3 "
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-trending-up bx-md text-success'></i><br>
+                                            Tea Income</a><br>
+                                        <label id="formatted-teaincome" class="text-dark">Rs. {{$teaincome}}</label>
+                                      
+
+                                    </div>
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3 ">
+                                        <a class="text-dark">
+                                            <i class='bx bx-rupee bx-md text-success'></i><br>
+                                            Total Exp</a><br>
+                                        <label id="formatted-exp" class="text-dark">Rs. {{$total_expenses}}</label>
+                                    </div>
                                 </div>
 
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3 " style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-trending-up bx-md text-success'></i><br>
-                                        Net Profit</a><br>
-                                        <label class="text-dark">Rs. {{$netprofit}}</label>
-                                </div>
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3 " style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-trending-up bx-md text-success'></i><br>
-                                        Tea Income</a><br>
-                                        <label class="text-dark">Rs. {{$teaincome}}</label>
-                                </div>
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3 ">
-                                    <a class="text-dark">
-                                        <i class='bx bx-rupee bx-md text-success'></i><br>
-                                        Total Exp</a><br>
-                                        <label class="text-dark">Rs. {{$total_expenses}}</label>
-                                </div>
-                            </div>
 
+                                <br><br>
+                                <div class="row align-items-center  mb-2">
+                                    <!-- First column with a vertical line on the right side -->
+                                    <div class="col-6 col-sm-3 text-center pr-3 mt-3 "
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-line-chart-down bx-md text-success'></i><br>
+                                            Employees Exp</a><br>
+                                        <label id="formatted-emp-exp" class="text-dark">Rs. {{$totalemployeesamount}}</label>
+                                    </div>
 
-<br><br>
-                            <div class="row align-items-center  mb-2">
-                                <!-- First column with a vertical line on the right side -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3 " style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-line-chart-down bx-md text-success'></i><br>
-                                        Employees Exp</a><br>
-                                        <label class="text-dark">Rs. {{$totalemployeesamount}}</label>
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3 mt-3"
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-line-chart-down bx-md text-success'></i><br>
+                                            Chemical Exp</a><br>
+                                        <label id="formatted-chemical" class="text-dark">Rs. {{$chemicalexpenses}}</label>
+                                    </div>
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3"
+                                        style="border-right: 1px solid #ccc;">
+                                        <a class="text-dark">
+                                            <i class='bx bx-line-chart-down bx-md text-success'></i><br>
+                                            Fertilizer Exp</a><br>
+                                        <label id="formatted-fert-exp"class="text-dark">Rs. {{$fertilizerexpenses}}</label>
+                                    </div><br>
+                                    <!-- Second column -->
+                                    <div class="col-6 col-sm-3 text-center pr-3  mt-3">
+                                        <a class="text-dark">
+                                            <i class='bx bxs-leaf bx-md text-success'></i><br>
+                                            Total Tea Kg</a><br>
+                                        <label id="formatted-total" class="text-dark">{{$totaltea->total}} Kg</label>
+                                    </div>
                                 </div>
-
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3" style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-line-chart-down bx-md text-success'></i><br>
-                                        Chemical Exp</a><br>
-                                        <label class="text-dark">Rs. {{$chemicalexpenses}}</label>
-                                </div>
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3" style="border-right: 1px solid #ccc;">
-                                    <a class="text-dark">
-                                        <i class='bx bx-line-chart-down bx-md text-success'></i><br>
-                                        Fertilizer Exp</a><br>
-                                        <label class="text-dark">Rs. {{$fertilizerexpenses}}</label>
-                                </div><br>
-                                <!-- Second column -->
-                                <div class="col-6 col-sm-3 text-center pr-3 bx-flashing-hover mt-3">
-                                    <a class="text-dark">
-                                        <i class='bx bxs-leaf bx-md text-success'></i><br>
-                                        Total Tea Kg</a><br>
-                                        <label class="text-dark">{{$totaltea->total}} Kg</label>
-                                </div>
-                            </div>
 
 
 
@@ -352,8 +362,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
                     <div class="col-lg-4">
                         <div class="row">
@@ -624,6 +632,39 @@
                         </div>
                     </div>
                 </div> -->
+
+
+
+                <script>
+    var netprofit = {{$netprofit}};
+    var formattedTeaprofit = netprofit.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-teaprofit").innerText = 'Rs. ' + formattedTeaprofit;
+
+    var teaincome = {{$teaincome}};
+    var formattedTeaincome = teaincome.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-teaincome").innerText = 'Rs. ' + formattedTeaincome;
+
+    var total_expenses = {{$total_expenses}};
+    var formattedExp = total_expenses.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-exp").innerText = 'Rs. ' + formattedExp;
+
+    var totalemployeesamount = {{$totalemployeesamount}};
+    var formattedEmpExp = totalemployeesamount.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-emp-exp").innerText = 'Rs. ' + formattedEmpExp;
+
+    var chemicalexpenses = {{$chemicalexpenses}};
+    var formattedCheExp = chemicalexpenses.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-chemical").innerText = 'Rs. ' + formattedCheExp;
+
+    var fertilizerexpenses = {{$fertilizerexpenses}};
+    var formattedFertExp = fertilizerexpenses.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+    document.getElementById("formatted-fert-exp").innerText = 'Rs. ' + formattedFertExp;
+
+   
+
+
+</script>
+
 
 
             </div>
