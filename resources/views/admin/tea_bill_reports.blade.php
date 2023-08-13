@@ -130,26 +130,26 @@
                     </h5>
                     <div class="row">
                         <div class="col-md-4">
-                            <div style="background-image: linear-gradient(green, yellow);" id="card" class="card">
-                                <div class="card-body w3-border-red w3-leftbar rounded">
-                                    <h4 class="card-title text-light"><i class='bx bx-leaf'></i> Total Tea Kg</h4>
-                                    <h4 class="text-light">{{ $teabillreport->total_tea_kg }} Kg</h4>
+                            <div  id="card" class="card">
+                                <div class="card-body w3-border-green w3-leftbar rounded">
+                                    <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total Tea</h4>
+                                    <h4 class="text-dark">{{ $teabillreport->total_tea_kg/100 }} quintils</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div style="background-image: linear-gradient(green, yellow);" id="card" class="card">
-                                <div class="card-body w3-border-red w3-leftbar rounded">
-                                    <h4 class="card-title text-light"><i class='bx bx-leaf'></i> Total Wage Kg</h4>
-                                    <h4 class="text-light">{{ $teabillreport->total_wage_kg }} Kg</h4>
+                            <div id="card" class="card">
+                                <div class="card-body w3-border-green w3-leftbar rounded">
+                                    <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total Wage</h4>
+                                    <h4 class="text-dark">{{ $teabillreport->total_wage_kg/100 }} quintils</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div style="background-image: linear-gradient(green, yellow);" id="card" class="card">
-                                <div class="card-body w3-border-red w3-leftbar rounded">
-                                    <h4 class="card-title text-light"><i class='bx bx-leaf'></i> Total Wage Amount</h4>
-                                    <h4 class="text-light">Rs. {{ $teabillreport->total_wage_amount}}</h4>
+                            <div id="card" class="card">
+                                <div class="card-body w3-border-green w3-leftbar rounded">
+                                    <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total Wage Amount</h4>
+                                    <h4 class="text-dark">Rs. {{ $teabillreport->total_wage_amount}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -158,18 +158,18 @@
 
                     <div class="row">
                         <div class="col-md-4">
-                            <div style="background-image: linear-gradient(green, yellow);" id="card" class="card">
-                                <div class="card-body w3-border-red w3-leftbar rounded">
-                                    <h4 class="card-title text-light"><i class='bx bx-leaf'></i> Total OT Amount</h4>
-                                    <h4 class="text-light">Rs. {{ $teabillreport->total_ot_amount }}</h4>
+                            <div  id="card" class="card">
+                                <div class="card-body w3-border-green w3-leftbar rounded">
+                                    <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total OT Amount</h4>
+                                    <h4 class="text-dark">Rs. {{ $teabillreport->total_ot_amount }}</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div style="background-image: linear-gradient(green, yellow);" id="card" class="card">
-                                <div class="card-body w3-border-red w3-leftbar rounded">
-                                    <h4 class="card-title text-light"><i class='bx bx-leaf'></i> Total Amount</h4>
-                                    <h4 class="text-light">Rs. {{ $teabillreport->total_amount2}}</h4>
+                            <div  id="card" class="card">
+                                <div class="card-body w3-border-green w3-leftbar rounded">
+                                    <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total Amount</h4>
+                                    <h4 class="text-dark">Rs. {{ $teabillreport->total_amount2}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -217,6 +217,8 @@
                     height: calc(2.25rem + 2px) !important;
 
                 }
+
+                
                 </style>
 
 

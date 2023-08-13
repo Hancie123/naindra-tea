@@ -389,7 +389,7 @@
 
                 <br>
                 <div class="table-responsive">
-                    <table class="table  table-hover table-striped" id="table_data">
+                    <table class="table  table-hover" id="table_data">
                         <thead>
                             <tr>
                                 <th>Bill ID</th>
@@ -553,12 +553,16 @@
                 /* Change the background color and font size of the table rows */
                 #table_data tbody tr {
                     background-color: #f8f9fa;
-                    font-size: 14px;
+                    font-size: 0.93em;
+                    font-weight: normal;
+                    font-size: normal;
+                    color:black;
                 }
 
                 /* Add hover effect to the table rows */
                 #table_data tbody tr:hover {
                     background-color: #e2e6ea;
+                    
                 }
 
                 .dataTables_wrapper .dataTables_filter input {

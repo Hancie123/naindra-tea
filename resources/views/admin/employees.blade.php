@@ -143,7 +143,7 @@
                             <tr>
                                 <td>{{$data['Employees_ID']}}</td>
                                 <td>{{$data['Name']}}</td>
-                                <td>{{$data['Mobile']}}</td>
+                                <td>{{$data->Mobile ? $data->Mobile: "Null"}}</td>
                                 <td>{{$data['Address']}}</td>
                                 <td>
                                     @if ($data->created_at)
@@ -305,12 +305,12 @@
                     font-size: normal;
                 }
 
-                /* Change the background color and font size of the table rows */
-                #table_data tbody tr {
+                #myTable tbody tr {
                     background-color: #f8f9fa;
-                    font-size: 14px;
+                    font-size: 0.93em;
+                    font-weight: normal;
+                    font-size: normal;
                 }
-
                 /* Add hover effect to the table rows */
                 #table_data tbody tr:hover {
                     background-color: #e2e6ea;
