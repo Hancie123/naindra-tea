@@ -18,11 +18,9 @@ class tearecordreportcontroller extends Controller
         $remarks=$request['remarks'];
 
 
-        $tearecord = TeaModel::select('remarks','nep_date','total_tea_kg','plucked_time','total_amount'
-        
-    )
-    ->where('remarks', $remarks)
-    ->get();
+        $tearecord = TeaModel::select('remarks','nep_date','total_tea_kg','plucked_time','total_amount')
+        ->where('remarks', $remarks)
+        ->get();
 
 
     $tearecord2 = TeaModel::select('nep_date')

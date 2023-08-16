@@ -17,6 +17,10 @@ class dashboardcontroller extends Controller
     
 
     $countemployees=EmployeesModel::count();
+
+
+    
+
     // Fetch the sum of 'total_amount' from TeaBillModel
     $totalemployeesamount = TeaBillModel::sum('total_amount');
 
@@ -34,7 +38,8 @@ class dashboardcontroller extends Controller
     $netprofit=$teaincome-$total_expenses;
 
     return view('admin/dashboard', compact('countemployees',
-    'totalemployeesamount','chemicalexpenses','fertilizerexpenses','totaltea','teaincome','total_expenses','netprofit'));
+    'totalemployeesamount','chemicalexpenses','fertilizerexpenses','totaltea',
+    'teaincome','total_expenses','netprofit'));
         
     }
 }

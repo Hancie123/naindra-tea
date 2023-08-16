@@ -78,10 +78,8 @@
                         Bills</a>
                     <a href="{{url('/admin/tea-reports/employees')}}" class="w3-bar-item w3-button">Employees</a>
                     <a href="{{url('/admin/tea-reports/tea-records')}}" class="w3-bar-item w3-button">Tea Records</a>
-                    <a href="#" class="w3-bar-item w3-button">Chemical</a>
-                    <a href="#" class="w3-bar-item w3-button">Fertilizer</a>
-                    <a href="#" class="w3-bar-item w3-button">Suppliers</a>
-
+                    <a href="{{url('/admin/tea-reports/rounds')}}" class="w3-bar-item w3-button">Rounds System</a>
+                    
                 </div>
 
 

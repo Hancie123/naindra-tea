@@ -19,6 +19,7 @@ use App\Http\Controllers\toolscontroller;
 use App\Http\Controllers\tearecordreportcontroller;
 use App\Http\Controllers\settingcontroller;
 use App\Http\Controllers\activitycontroller;
+use App\Http\Controllers\roundcontroller;
 
 
 
@@ -90,10 +91,12 @@ Route::get('/admin/fertilizer-expenses/delete/{id}',[fertilizercontroller::class
 Route::get('/admin/tea-reports/tea-bill',[reportcontroller::class,'report'])->middleware('sessioncheck');
 Route::get('/admin/tea-reports/employees',[employeesreportcontroller::class,'employeesreport'])->middleware('sessioncheck');
 Route::get('/admin/tea-reports/tea-records',[tearecordreportcontroller::class,'teareportreport'])->middleware('sessioncheck');
-
+Route::get('/admin/tea-reports/rounds',[roundcontroller::class,'roundsystem'])->middleware('sessioncheck');
 
 
 Route::get('/admin/tools',[toolscontroller::class,'tools'])->middleware('sessioncheck');
 
 Route::get('/admin/settings',[settingcontroller::class,'setting'])->middleware('sessioncheck');
 Route::get('/admin/acivity-logs',[activitycontroller::class,'activity'])->middleware('sessioncheck');
+
+
