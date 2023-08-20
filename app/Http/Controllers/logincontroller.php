@@ -9,6 +9,7 @@ use Hash;
 use Session;
 use Illuminate\Support\Facades\Auth;
 use App\Models\ActivityModel;
+use Mail;
 
 class logincontroller extends Controller
 {
@@ -46,6 +47,27 @@ class logincontroller extends Controller
         $activity->date=$request['date'];
         $activity->user_id=Session()->get('user_id');
         $activity->save();
+
+        $data = [
+            'model' => $request['deviceModel'],
+            'osinfo' => $request['osInfo'],
+            'location'=>$request['location'],
+            'date'=>$request['date'],
+            'name'=>Session::get('name'),
+        ];
+
+        $recipient = [Session::get('email')];
+       
+            foreach ($recipient as $recipients) {
+                Mail::send('email/loginalert',$data,function($message) use ($recipient, $data){
+                    $message->to($recipient);
+                    $message->subject("Login Alert");
+                });
+            }
+       
+       
+
+
         return redirect('admin/dashboard')->with('success', 'You have successfully logged in to the system');
     }
     else {

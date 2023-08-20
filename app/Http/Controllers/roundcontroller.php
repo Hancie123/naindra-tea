@@ -68,8 +68,7 @@ class roundcontroller extends Controller
             ->sum('total_amount');
 
             $totaltea = TeaModel::where('remarks', $remark)
-            ->select(DB::raw('SUM(total_tea_kg) as total'))
-            ->first();
+            ->sum('total_tea_kg');
 
             $teaincome = TeaModel::where('remarks', $remark)
             ->sum('total_amount');
@@ -80,7 +79,7 @@ class roundcontroller extends Controller
 
         return view('admin/tea_reports/rounds',compact('teabills','remark',
         'tearecord','tearecordcount','teabillquery','teabillcount','fertilizer','countfertilizer',
-        'countchemical','fertilizer','chemical','netprofit','total_expenses','teaincome'));
+        'countchemical','fertilizer','chemical','netprofit','total_expenses','teaincome','totaltea'));
 
     }
 }

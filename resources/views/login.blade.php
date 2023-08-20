@@ -50,7 +50,7 @@
 
     gtag('config', 'G-SMMSRZWMK7');
     </script>
-
+@livewireStyles
 
 </head>
 
@@ -409,7 +409,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
     }
     </style>
-
+@livewireScripts
 </body>
 
 </html>

@@ -143,7 +143,7 @@
                                 <div class="col-md-4">
                                     <div id="card" class="card">
                                         <div class="card-body w3-border-green w3-leftbar rounded">
-                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i>Net Profit</h4>
+                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Net Profit</h4>
                                             <h4 class="text-dark">Rs. {{ $netprofit }}</h4>
                                         </div>
                                     </div>
@@ -152,7 +152,7 @@
                                 <div class="col-md-4">
                                     <div id="card" class="card">
                                         <div class="card-body w3-border-green w3-leftbar rounded">
-                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i>Net Income</h4>
+                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Net Income</h4>
                                             <h4 class="text-dark">Rs. {{ $teaincome }}</h4>
                                         </div>
                                     </div>
@@ -161,13 +161,26 @@
                                 <div class="col-md-4">
                                     <div id="card" class="card">
                                         <div class="card-body w3-border-green w3-leftbar rounded">
-                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i>Expenses Amount
+                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Expenses Amount
                                             </h4>
                                             <h4 class="text-dark">Rs. {{ $total_expenses }}</h4>
                                         </div>
                                     </div>
                                 </div>
 
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                <div id="card" class="card">
+                                        <div class="card-body w3-border-green w3-leftbar rounded">
+                                            <h4 class="card-title text-dark"><i class='bx bx-leaf'></i> Total Tea [Deducted Water %]
+                                            </h4>
+                                            <h4 class="text-dark">{{ $totaltea/100 }} quintils</h4>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
 
