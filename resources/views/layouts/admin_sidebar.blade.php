@@ -17,8 +17,6 @@
                  </ul>
              </div>
 
-
-
              <script>
              // Get the logo link element
              var logoLink = document.getElementById('logoLink');
@@ -187,14 +185,14 @@
                  </li>
 
 
-                 <li class="sidebar-item">
+                 {{-- <li class="sidebar-item">
                      <a class="sidebar-link" href="{{url('/admin/settings')}}" aria-expanded="false">
                          <span>
                              <i class='bx bx-cog bx-sm'></i>
                          </span>
                          <span class="hide-menu">Settings</span>
                      </a>
-                 </li>
+                 </li> --}}
 
 
                  <li class="sidebar-item">

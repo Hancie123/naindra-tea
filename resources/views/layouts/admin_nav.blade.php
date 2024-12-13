@@ -58,10 +58,10 @@
                                 <i class='bx bx-time-five bx-sm'></i>
                                 <p class="mb-0 fs-3">Activity Logs</p>
                             </a>
-                            <a href="{{url('/admin/settings')}}" class="d-flex align-items-center gap-2 dropdown-item">
+                            {{-- <a href="{{url('/admin/settings')}}" class="d-flex align-items-center gap-2 dropdown-item">
                                 <i class='bx bx-cog bx-sm'></i>
                                 <p class="mb-0 fs-3">Settings</p>
-                            </a>
+                            </a> --}}
                             <a href="{{url('/logout')}}" class="d-flex align-items-center gap-2 dropdown-item">
                                 <i class='bx bx-log-out-circle bx-sm'></i>
                                 <p class="mb-0 fs-3">Logout</p>
@@ -69,7 +69,7 @@
                             <a class="d-flex align-items-center gap-2 dropdown-item">
                                 <div id="google_translate_element"></div>
                             </a>
-                            
+
                             <script type = "text/javascript">
                                 function googleTranslateElementInit() {
                                     new google.translate.TranslateElement({
@@ -80,7 +80,7 @@
                             <script type="text/javascript"
                                 src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
                             </script>
-                            
+
 
                         </div>
                     </div>

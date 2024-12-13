@@ -14,19 +14,19 @@ use Mail;
 class logincontroller extends Controller
 {
     public function login(Request $request){
-        
+
         $request->validate([
             'email'=>'email|required',
             'password'=>'required'
-            
+
         ]);
 
        $credentials=$request->only('email','password');
-       
+
        $users=User::where('email',$credentials['email'])->first();
 
-      
-       
+
+
        if(!$users){
         return back()->with('fail','The account does not found');
        }
@@ -57,25 +57,15 @@ class logincontroller extends Controller
         ];
 
         $recipient = [Session::get('email')];
-       
-            foreach ($recipient as $recipients) {
-                Mail::send('email/loginalert',$data,function($message) use ($recipient, $data){
-                    $message->to($recipient);
-                    $message->subject("Login Alert");
-                });
-            }
-       
-       
-
 
         return redirect('admin/dashboard')->with('success', 'You have successfully logged in to the system');
     }
     else {
         return back()->with('fail', 'Incorrect email and password!');
     }
-    
 
-        
+
+
         }
 
 
